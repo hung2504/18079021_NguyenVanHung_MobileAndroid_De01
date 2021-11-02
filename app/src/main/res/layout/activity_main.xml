@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imgButMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageButton>
+    <TextView
+        android:id="@+id/tvPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now Playing"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgButMenu"
+        app:layout_constraintEnd_toStartOf="@id/imgButSet"
+        android:layout_marginTop="5dp">
+    </TextView>
+    <ImageButton
+        android:id="@+id/imgButSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_set"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageButton>
+    <ImageView
+        android:id="@+id/img_lay"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:src="@drawable/vsmart_live_xanh"
+        android:transitionName="fade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlay"
+        android:layout_marginTop="20dp">
+    </ImageView>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title Music"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/img_lay"
+        app:layout_constraintStart_toEndOf="@id/imgButMenu"
+        app:layout_constraintEnd_toStartOf="@id/imgButSet"
+        android:layout_marginTop="10dp">
+    </TextView>
+    <TextView
+        android:id="@+id/tvSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Single"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toEndOf="@id/imgButMenu"
+        app:layout_constraintEnd_toStartOf="@id/imgButSet"
+        android:layout_marginTop="5dp">
+    </TextView>
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:maxHeight="10dip"
+        android:minHeight="10dip"
+        android:progress="30"
+        android:progressDrawable="@drawable/greenprogress"
+        app:layout_constraintTop_toBottomOf="@id/tvSingle"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/previor"
+        app:layout_constraintTop_toBottomOf="@id/ProgressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="90dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/imageButStart"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/stop"
+        app:layout_constraintEnd_toStartOf="@id/imageButNext"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toEndOf="@id/imageButPre"
+       app:layout_constraintTop_toTopOf="@id/imageButPre" />
+
+    <ImageButton
+        android:id="@+id/imageButStop"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/pause"
+        app:layout_constraintEnd_toStartOf="@id/imageButNext"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toEndOf="@id/imageButPre"
+       app:layout_constraintTop_toTopOf="@id/imageButPre" />
+
+    <ImageButton
+        android:id="@+id/imageButNext"
+        android:layout_width="57dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:background="@drawable/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageButPre"/>
+
+    <ImageButton
+        android:id="@+id/imageButHeart"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/heart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButStop" />
+
+    <ImageButton
+        android:id="@+id/imageButUndo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/undo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButStop" />
+
+    <ImageButton
+        android:id="@+id/imageButRepeat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/repeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButStop" />
+
+    <ImageButton
+        android:id="@+id/imageButShare"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginLeft="336dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/share"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButStop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
